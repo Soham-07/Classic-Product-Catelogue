@@ -659,6 +659,9 @@ async function fetchRemote(){
   return data;
 }
 
+/* =========================================================
+   PERMANENT FIX: pushToGitHub with Auto-Retry for SHA Conflicts
+   ========================================================= */
 async function pushToGitHub(data, commitMsg){
   if(!ghConfig || !ghConfig.token || !ghConfig.owner || !ghConfig.repo){
     throw new Error('GitHub not configured');
@@ -670,29 +673,42 @@ async function pushToGitHub(data, commitMsg){
     'Accept': 'application/vnd.github+json',
     'Content-Type': 'application/json'
   };
-  // Get current SHA (if exists)
-  var sha = null;
-  try {
-    var getRes = await fetch(apiUrl + '?ref=' + branch, { headers: headers });
-    if(getRes.ok){
-      var fileInfo = await getRes.json();
-      sha = fileInfo.sha;
+
+  // Retry loop for stale SHA conflicts
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let sha = null;
+    try {
+      // ALWAYS fetch a fresh SHA right before the PUT
+      var getRes = await fetch(apiUrl + '?ref=' + branch + '&t=' + Date.now(), { headers: headers });
+      if(getRes.ok){
+        var fileInfo = await getRes.json();
+        sha = fileInfo.sha;
+      }
+    } catch(e) { /* file may not exist yet */ }
+
+    var body = {
+      message: commitMsg || 'Update catalogue',
+      content: b64EncodeUnicode(JSON.stringify(data, null, 2)),
+      branch: branch
+    };
+    if(sha) body.sha = sha;
+
+    var putRes = await fetch(apiUrl, { method: 'PUT', headers: headers, body: JSON.stringify(body) });
+    
+    if(putRes.ok){
+      return await putRes.json();
     }
-  } catch(e){ /* file may not exist yet */ }
-
-  var body = {
-    message: commitMsg || 'Update catalogue',
-    content: b64EncodeUnicode(JSON.stringify(data, null, 2)),
-    branch: branch
-  };
-  if(sha) body.sha = sha;
-
-  var putRes = await fetch(apiUrl, { method: 'PUT', headers: headers, body: JSON.stringify(body) });
-  if(!putRes.ok){
+    
+    // If it's a 409 Conflict or 422 Unprocessable Entity (SHA mismatch), wait and retry
+    if((putRes.status === 409 || putRes.status === 422) && attempt < 3){
+      await new Promise(r => setTimeout(r, 1000 * attempt)); // Wait 1s, then 2s
+      continue;
+    }
+    
+    // If it's another error or we ran out of retries, throw the error
     var err = await putRes.json().catch(function(){ return {}; });
     throw new Error(err.message || ('Publish failed (' + putRes.status + ')'));
   }
-  return await putRes.json();
 }
 
 async function saveAndPush(commitMsg){
