@@ -1,5 +1,5 @@
 {
-  "_version": 1794577148668,
+  "_version": 1794577288214,
   "settings": {
     "name": "Classic Products",
     "tag": "Premium Wooden Quality Handles",
@@ -278,9 +278,9 @@
       "id": "mwevcxx1apshc"
     },
     {
-      "name": "lock",
+      "name": "lock not lock",
       "category": "Consil",
-      "price": 6547,
+      "price": 181818181,
       "unit": "pc",
       "sizes": [],
       "desc": "",
