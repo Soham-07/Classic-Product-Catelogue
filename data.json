@@ -1,5 +1,5 @@
 {
-  "_version": 1794577288214,
+  "_version": 1794577371336,
   "settings": {
     "name": "Classic Products",
     "tag": "Premium Wooden Quality Handles",
@@ -256,9 +256,9 @@
       "id": "mweve6tde99ur"
     },
     {
-      "name": "knob",
+      "name": "knob 123456",
       "category": "Door Handles",
-      "price": 500,
+      "price": 500000,
       "unit": "pc",
       "sizes": [],
       "desc": "",
