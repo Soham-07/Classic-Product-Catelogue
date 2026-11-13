@@ -1,5 +1,5 @@
 {
-  "_version": 1794577371336,
+  "_version": 1794577606586,
   "settings": {
     "name": "Classic Products",
     "tag": "Premium Wooden Quality Handles",
@@ -9,7 +9,7 @@
     "password": "5474",
     "templates": {
       "product": "Hello {business}, I'm interested in {product} ({price}). Please share details.",
-      "contact": "Hello {business}, my name is {name}. Phone: {phone}. Requirement: {message}"
+      "contact": "Hello {business}, \nmy name is {name}. \nPhone: {phone}. \n\nRequirement: {message}"
     }
   },
   "products": [
