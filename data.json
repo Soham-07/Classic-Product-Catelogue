@@ -1,5 +1,5 @@
 {
-  "_version": 1794577606586,
+  "_version": 1794577750928,
   "settings": {
     "name": "Classic Products",
     "tag": "Premium Wooden Quality Handles",
@@ -14,9 +14,9 @@
   },
   "products": [
     {
-      "name": "square set gold",
+      "name": "square set gold golden 123",
       "category": "Door Handles",
-      "price": 650,
+      "price": 6500,
       "unit": "pc",
       "sizes": [],
       "desc": "",
