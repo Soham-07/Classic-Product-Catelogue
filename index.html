@@ -10,18 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0a0c; --bg-2:#0f0f13; --surface:#141419; --surface-2:#1b1b22; --surface-3:#232329;
-  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
-  --gold:#c9a227; --gold-2:#e8c96a; --gold-soft:rgba(201,162,39,.12);
-  --text:#f3f3f5; --muted:#9a9aa6; --muted-2:#6e6e7a;
-  --ok:#3fbf7f; --danger:#e5544b;
-  --radius:18px; --radius-sm:12px;
+  --bg:#0a0a0c;--bg-2:#0f0f13;--surface:#141419;--surface-2:#1b1b22;--surface-3:#232329;
+  --line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);
+  --gold:#c9a227;--gold-2:#e8c96a;--gold-soft:rgba(201,162,39,.12);
+  --text:#f3f3f5;--muted:#9a9aa6;--muted-2:#6e6e7a;
+  --ok:#3fbf7f;--danger:#e5544b;
+  --radius:18px;--radius-sm:12px;
   --shadow:0 24px 60px -20px rgba(0,0,0,.8);
-  --ease:cubic-bezier(.22,1,.36,1); --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease:cubic-bezier(.22,1,.36,1);--ease-out:cubic-bezier(.16,1,.3,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 button,input,select,textarea{font:inherit;color:inherit}
 button{background:none;border:none;cursor:pointer}
@@ -30,7 +30,6 @@ a{color:inherit;text-decoration:none}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:#2a2a33;border-radius:20px;border:2px solid var(--bg)}
-::-webkit-scrollbar-thumb:hover{background:#3a3a45}
 .wrap{width:min(1220px,92vw);margin-inline:auto}
 .hidden{display:none !important}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
@@ -42,8 +41,6 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-heigh
 .btn:active{transform:scale(.97)}
 .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#141005;box-shadow:0 10px 30px -10px rgba(201,162,39,.6)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(201,162,39,.75)}
-.btn-gold::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.55) 50%,transparent 75%);transform:translateX(-120%);transition:transform .8s var(--ease)}
-.btn-gold:hover::after{transform:translateX(120%)}
 .btn-outline{border:1px solid var(--line-2);color:var(--text);background:rgba(255,255,255,.02)}
 .btn-outline:hover{background:rgba(255,255,255,.07);border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px)}
 .btn-sm{padding:9px 18px;font-size:13px}
@@ -58,7 +55,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-heigh
 .brand-txt b{font-size:15px;font-weight:600;letter-spacing:.02em}
 .brand-txt i{font-style:normal;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)}
 .nav{display:flex;align-items:center;gap:6px}
-.nav-link{padding:9px 15px;border-radius:100px;font-size:13.5px;font-weight:500;color:var(--muted);transition:color .3s,background .3s;position:relative}
+.nav-link{padding:9px 15px;border-radius:100px;font-size:13.5px;font-weight:500;color:var(--muted);transition:color .3s,background .3s}
 .nav-link:hover{color:var(--text);background:rgba(255,255,255,.05)}
 .nav-link.active{color:var(--gold-2)}
 .hamburger{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);flex-direction:column;gap:5px;align-items:center;justify-content:center}
@@ -77,7 +74,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-heigh
 .hero-in{width:min(1220px,92vw);margin-inline:auto;max-width:820px}
 .hero .eyebrow{opacity:0;animation:riseIn .9s var(--ease-out) .1s forwards}
 .hero-title{font-size:clamp(38px,7.2vw,74px);line-height:1.06;margin-bottom:22px;letter-spacing:-.025em;opacity:0;animation:riseIn 1s var(--ease-out) .22s forwards}
-.hero-title em{font-style:italic;color:var(--gold-2);position:relative}
+.hero-title em{font-style:italic;color:var(--gold-2)}
 .hero-sub{font-size:clamp(15px,1.8vw,17.5px);color:var(--muted);max-width:560px;margin-bottom:34px;opacity:0;animation:riseIn 1s var(--ease-out) .36s forwards}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:riseIn 1s var(--ease-out) .5s forwards}
 .hero-stats{display:flex;gap:44px;margin-top:64px;padding-top:30px;border-top:1px solid var(--line);opacity:0;animation:riseIn 1s var(--ease-out) .64s forwards;flex-wrap:wrap}
@@ -103,17 +100,17 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-heigh
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease),border-color .4s,box-shadow .5s var(--ease);position:relative;cursor:pointer}
 .card:hover{transform:translateY(-7px);border-color:rgba(201,162,39,.42);box-shadow:0 30px 60px -26px rgba(0,0,0,.95),0 0 0 1px rgba(201,162,39,.12)}
 .card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
-.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .card:hover .card-img img{transform:scale(1.07)}
-.badge{position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:100px;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,10,12,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);color:var(--gold-2)}
+.badge{position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:100px;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,10,12,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);color:var(--gold-2)}
 .card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card-body h3{font-size:17px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.card-body h3{font-size:17px;font-family:'Inter',sans-serif;font-weight:600;line-height:1.35}
 .card-desc{font-size:12.8px;color:var(--muted-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.55}
 .sizes{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
 .size-tag{font-size:10.5px;padding:3px 9px;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted);letter-spacing:.03em}
 .card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
 .price{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--gold-2);line-height:1}
-.price small{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted-2);font-weight:400;letter-spacing:.04em}
+.price small{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted-2);font-weight:400}
 .view-hint{font-size:11px;color:var(--muted-2);font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
 .card:hover .view-hint{color:var(--gold-2)}
 @keyframes pulseGold{0%{box-shadow:0 0 0 0 rgba(201,162,39,.55)}100%{box-shadow:0 0 0 16px rgba(201,162,39,0)}}
@@ -128,7 +125,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-heigh
 .form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
 .field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
 .field label{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);font-weight:600}
-.field input,.field textarea,.field select{width:100%;padding:13px 16px;border-radius:var(--radius-sm);background:var(--bg-2);border:1px solid var(--line);color:var(--text);font-size:14px;outline:none;transition:border-color .3s,box-shadow .3s,background .3s;appearance:none}
+.field input,.field textarea,.field select{width:100%;padding:13px 16px;border-radius:var(--radius-sm);background:var(--bg-2);border:1px solid var(--line);color:var(--text);font-size:14px;outline:none;transition:border-color .3s,box-shadow .3s;appearance:none}
 .field textarea{resize:vertical;min-height:104px;line-height:1.6}
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-soft);background:var(--surface-2)}
 .field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
@@ -142,7 +139,7 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
 .foot-links button:hover,.foot-links a:hover{color:var(--gold-2)}
 .foot-links .admin-link{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:100px;border:1px solid var(--line);color:var(--muted);transition:all .3s}
 .foot-links .admin-link:hover{color:var(--gold-2);border-color:rgba(201,162,39,.4);background:var(--gold-soft)}
-.modal-bg{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+.modal-bg{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
 .modal-bg.show{opacity:1;pointer-events:auto}
 .modal{width:min(880px,100%);max-height:90svh;overflow-y:auto;background:var(--bg-2);border:1px solid var(--line-2);border-radius:24px;transform:translateY(30px) scale(.97);opacity:0;transition:transform .45s var(--ease),opacity .35s var(--ease);box-shadow:0 40px 100px -30px #000;position:relative}
 .modal-bg.show .modal{transform:none;opacity:1}
@@ -181,8 +178,8 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
 .admin-hd{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
 .admin-hd h2{font-size:24px}
 .admin-hd p{font-size:13px;color:var(--muted-2)}
-.prow{display:flex;align-items:center;gap:16px;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;transition:border-color .3s,transform .3s,background .3s}
-.prow:hover{border-color:var(--line-2);background:var(--surface-2);transform:translateX(3px)}
+.prow{display:flex;align-items:center;gap:16px;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;transition:border-color .3s,background .3s}
+.prow:hover{border-color:var(--line-2);background:var(--surface-2)}
 .prow img{width:62px;height:62px;border-radius:10px;object-fit:cover;flex-shrink:0;background:var(--surface-2)}
 .prow-info{flex:1;min-width:0}
 .prow-info b{display:block;font-size:14px;font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -207,13 +204,14 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
 .gh-note{background:var(--gold-soft);border:1px solid rgba(201,162,39,.3);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.6;max-width:700px}
 .gh-note b{color:var(--gold-2)}
 .gh-note code{background:var(--bg-2);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--gold-2)}
-.gh-status{padding:12px 16px;border-radius:10px;font-size:13px;margin-top:16px;max-width:700px;display:none}
+.gh-status{padding:12px 16px;border-radius:10px;font-size:13px;margin-top:16px;max-width:700px;display:none;line-height:1.6}
 .gh-status.show{display:block}
 .gh-status.ok{background:rgba(63,191,127,.1);border:1px solid rgba(63,191,127,.3);color:#a8f0c6}
 .gh-status.err{background:rgba(229,84,75,.1);border:1px solid rgba(229,84,75,.3);color:#ffb3ae}
 .gh-status.info{background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
+.gh-status.progress{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);color:var(--gold-2)}
 .toast-wrap{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:999;display:flex;flex-direction:column;gap:10px;align-items:center;pointer-events:none}
-.toast{padding:13px 22px;border-radius:100px;background:var(--surface-3);border:1px solid var(--line-2);color:var(--text);font-size:13px;font-weight:500;box-shadow:0 20px 50px -15px #000;animation:toastIn .5s var(--ease) forwards;display:flex;align-items:center;gap:9px;backdrop-filter:blur(12px);white-space:nowrap;max-width:90vw;overflow:hidden;text-overflow:ellipsis}
+.toast{padding:13px 22px;border-radius:100px;background:var(--surface-3);border:1px solid var(--line-2);color:var(--text);font-size:13px;font-weight:500;box-shadow:0 20px 50px -15px #000;animation:toastIn .5s var(--ease) forwards;display:flex;align-items:center;gap:9px;backdrop-filter:blur(12px);max-width:90vw;overflow:hidden;text-overflow:ellipsis}
 .toast.ok{border-color:rgba(63,191,127,.45);color:#a8f0c6}
 .toast.err{border-color:rgba(229,84,75,.45);color:#ffb3ae}
 @keyframes toastIn{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:none}}
@@ -401,10 +399,16 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
         </form>
       </div>
       <div class="admin-wrap tab-pane hidden" data-pane="github">
-        <div class="admin-hd"><div><h2>GitHub Sync</h2><p>Push your catalogue to GitHub so every device (mobile, PC) sees the same data.</p></div></div>
+        <div class="admin-hd"><div><h2>GitHub Sync</h2><p>Push your catalogue to GitHub so every device sees the same data.</p></div></div>
         <div class="gh-note">
-          <b>How it works:</b> Your site loads <code>data.json</code> from your GitHub repo on every page view. When you save a change here, it gets pushed to GitHub automatically — all devices see it on refresh.<br><br>
-          <b>Setup:</b> Create a <b>Fine-grained personal access token</b> at <code>github.com/settings/tokens?type=beta</code> with <b>Contents: Read and write</b> access to this repo only. Paste it below.
+          <b>Setup (one-time):</b><br>
+          1. Go to <code>github.com/settings/tokens?type=beta</code><br>
+          2. Click <b>Generate new token</b><br>
+          3. Repository access: <b>Only select repositories</b> → choose your site's repo<br>
+          4. Permissions: <b>Contents: Read and write</b><br>
+          5. Generate → copy the token<br>
+          6. Paste below and click <b>Save &amp; Test</b><br><br>
+          After that, every product save will push to <code>data.json</code> in your repo → all devices see it on refresh.
         </div>
         <form id="githubForm" style="max-width:560px;">
           <div class="row-2">
@@ -420,7 +424,7 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
               </label>
             </div>
           </div>
-          <div class="field"><label>Personal Access Token</label><input id="ghToken" type="password" placeholder="github_pat_..."><small>Stored only in this browser (localStorage). Never committed to the repo.</small></div>
+          <div class="field"><label>Personal Access Token</label><input id="ghToken" type="password" placeholder="github_pat_..."><small>Stored only in this browser (localStorage). Never committed.</small></div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
             <button type="submit" class="btn btn-gold">Save &amp; Test</button>
             <button type="button" class="btn btn-outline" id="ghPublishNow">⬆ Publish Now</button>
@@ -443,7 +447,7 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
         <hr style="border:none;border-top:1px solid var(--line);margin:34px 0;">
         <div style="max-width:560px;">
           <h3 style="font-size:17px;margin-bottom:6px;">Backup &amp; Restore</h3>
-          <p style="font-size:13px;color:var(--muted-2);margin-bottom:16px;">Download your current catalogue as a JSON file, or restore from a previous backup.</p>
+          <p style="font-size:13px;color:var(--muted-2);margin-bottom:16px;">Download your data as JSON, or restore from a backup file.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <button class="btn btn-outline btn-sm" id="exportBtn">⬇ Export data.json</button>
             <label class="btn btn-outline btn-sm" style="cursor:pointer;">⬆ Import JSON<input type="file" id="importInput" accept="application/json" style="display:none;"></label>
@@ -476,8 +480,8 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
         <div class="img-pick">
           <img class="img-prev" id="pfPreview" alt="preview">
           <div style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:170px;">
-            <input id="pfImgUrl" placeholder="Paste image URL…" style="padding:11px 14px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);outline:none;font-size:13px;">
-            <label class="file-label">📁 Upload from device<input type="file" id="pfImgFile" accept="image/*"></label>
+            <input id="pfImgUrl" placeholder="Paste image URL (recommended)…" style="padding:11px 14px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);outline:none;font-size:13px;">
+            <label class="file-label">📁 Or upload (base64, increases size)<input type="file" id="pfImgFile" accept="image/*"></label>
           </div>
         </div>
       </div>
@@ -499,26 +503,50 @@ footer{padding:52px 0 36px;border-top:1px solid var(--line);background:var(--bg-
 (function(){
 'use strict';
 
+/* =========================================================
+   CONFIG
+   ========================================================= */
 var PREFIX = 'luxhw_';
+var DATA_FILE = 'data.json';
+
+/* =========================================================
+   STORAGE
+   ========================================================= */
 var store = {
-  get: function(k, fb){ try { var v = localStorage.getItem(PREFIX + k); return v === null ? fb : JSON.parse(v); } catch(e){ return fb; } },
-  set: function(k, v){ try { localStorage.setItem(PREFIX + k, JSON.stringify(v)); return true; } catch(e){ toast('Storage full! Use an image URL or a smaller image.', 'err'); return false; } },
+  get: function(k, fb){
+    try { var v = localStorage.getItem(PREFIX + k); return v === null ? fb : JSON.parse(v); }
+    catch(e){ return fb; }
+  },
+  set: function(k, v){
+    try { localStorage.setItem(PREFIX + k, JSON.stringify(v)); return true; }
+    catch(e){ toast('Storage full! Use an image URL instead of uploading.', 'err'); return false; }
+  },
   del: function(k){ try { localStorage.removeItem(PREFIX + k); } catch(e){} }
 };
 
+/* =========================================================
+   UTILS
+   ========================================================= */
 function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
 function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
-function money(n){ if(n === '' || n === null || n === undefined || isNaN(Number(n)) || Number(n) === 0) return null; return '₹' + Number(n).toLocaleString('en-IN'); }
+function money(n){ if(n === '' || n == null || isNaN(Number(n)) || Number(n) === 0) return null; return '₹' + Number(n).toLocaleString('en-IN'); }
 var PLACEHOLDER = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1d24"/><stop offset="1" stop-color="#101014"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><g fill="none" stroke="#c9a227" stroke-opacity="0.32" stroke-width="2"><circle cx="200" cy="136" r="40"/><path d="M200 96V80M200 192v-16M160 136h-16M256 136h-16"/><path d="M172 108l-11-11M228 108l11-11M172 164l-11 11M228 164l11 11"/></g><text x="200" y="232" font-family="sans-serif" font-size="13" fill="#5a5a66" text-anchor="middle" letter-spacing="4">NO IMAGE</text></svg>'
 );
 function imgOf(p){ return (p && p.image) ? p.image : PLACEHOLDER; }
+function b64EncodeUnicode(str){
+  try { return btoa(unescape(encodeURIComponent(str))); } catch(e){ return btoa(str); }
+}
 
-var DEFAULT_PRODUCT_MSG = 'Hello {business}, I\'m interested in {product} ({price}). Please share details.';
-var DEFAULT_CONTACT_MSG = 'Hello {business}, my name is {name}. Phone: {phone}. Requirement: {message}';
+/* =========================================================
+   DEFAULT / SEED DATA
+   ========================================================= */
+var DEFAULT_PRODUCT_MSG = "Hello {business}, I'm interested in {product} ({price}). Please share details.";
+var DEFAULT_CONTACT_MSG = "Hello {business}, my name is {name}. Phone: {phone}. Requirement: {message}";
 
-function seedData(){
+function defaultData(){
   return {
+    _version: 0,
     settings: {
       name:'Sharma Hardware & Tools', tag:'Tools • Fittings • Finishes',
       phone:'919876543210', email:'sales@sharmahardware.com',
@@ -531,9 +559,9 @@ function seedData(){
       { id:'c3', name:'Fittings' }, { id:'c4', name:'Paint & Finishes' }
     ],
     products:[
-      { id:'p1', name:'Impact Drill 13mm', category:'Power Tools', price:3450, unit:'pc', sizes:['13mm','16mm'], desc:'Variable speed impact drill with 750W motor.', image:'', published:true },
+      { id:'p1', name:'Impact Drill 13mm', category:'Power Tools', price:3450, unit:'pc', sizes:['13mm','16mm'], desc:'Variable speed impact drill with 750W motor, ideal for masonry and steel.', image:'', published:true },
       { id:'p2', name:'Angle Grinder 4"', category:'Power Tools', price:2290, unit:'pc', sizes:['4 inch','5 inch'], desc:'850W heavy-duty angle grinder with overload protection.', image:'', published:true },
-      { id:'p3', name:'Adjustable Wrench Set', category:'Hand Tools', price:890, unit:'set', sizes:['8"','10"','12"'], desc:'Chrome vanadium steel adjustable wrenches.', image:'', published:true },
+      { id:'p3', name:'Adjustable Wrench Set', category:'Hand Tools', price:890, unit:'set', sizes:['8"','10"','12"'], desc:'Chrome vanadium steel adjustable wrenches. Set of 3.', image:'', published:true },
       { id:'p4', name:'Screwdriver Kit (12 pc)', category:'Hand Tools', price:640, unit:'set', sizes:['Flat','Phillips','Torx'], desc:'Magnetic-tip screwdrivers with ergonomic grips.', image:'', published:true },
       { id:'p5', name:'Stainless Steel Hinge', category:'Fittings', price:145, unit:'pc', sizes:['3 inch','4 inch','5 inch'], desc:'SS-304 butt hinge, rust resistant.', image:'', published:true },
       { id:'p6', name:'Concealed Door Handle', category:'Fittings', price:420, unit:'pc', sizes:['Matte','Chrome','Gold'], desc:'Premium zinc-alloy concealed handle.', image:'', published:true },
@@ -543,13 +571,20 @@ function seedData(){
   };
 }
 
-var settings = {}, products = [], categories = [];
+/* =========================================================
+   STATE
+   ========================================================= */
+var settings = {};
+var products = [];
+var categories = [];
+var dataVersion = 0;
 var ghConfig = null;
 var ui = { cat: 'all', q: '', adminQ: '', tab: 'products' };
 var justAddedId = null;
-var lastSyncOk = false;
 
-/* ---------- Toast ---------- */
+/* =========================================================
+   TOAST
+   ========================================================= */
 var toastWrap = document.getElementById('toastWrap');
 function toast(msg, type){
   var el = document.createElement('div');
@@ -559,7 +594,9 @@ function toast(msg, type){
   setTimeout(function(){ el.classList.add('out'); setTimeout(function(){ el.remove(); }, 420); }, 2800);
 }
 
-/* ---------- Reveal ---------- */
+/* =========================================================
+   REVEAL OBSERVER
+   ========================================================= */
 var io = null;
 if('IntersectionObserver' in window){
   io = new IntersectionObserver(function(entries){
@@ -572,7 +609,9 @@ function observeReveals(){
   });
 }
 
-/* ---------- DOM refs ---------- */
+/* =========================================================
+   DOM REFS
+   ========================================================= */
 var pdModal    = document.getElementById('pdModal');
 var prodModal  = document.getElementById('prodModal');
 var adminEl    = document.getElementById('admin');
@@ -585,110 +624,93 @@ function lockScroll(){
   document.body.style.overflow = anyOpen ? 'hidden' : '';
 }
 
-/* ============================================================
-   DATA PERSISTENCE — GitHub Sync
-   ============================================================ */
-
-function b64EncodeUnicode(str){
-  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(m, p1){
-    return String.fromCharCode(parseInt(p1, 16));
-  }));
+/* =========================================================
+   DATA LOADING / SAVING
+   ========================================================= */
+function applyData(data){
+  settings = data.settings || {};
+  if(!settings.templates) settings.templates = { product: DEFAULT_PRODUCT_MSG, contact: DEFAULT_CONTACT_MSG };
+  products = Array.isArray(data.products) ? data.products : [];
+  categories = Array.isArray(data.categories) ? data.categories : [];
+  dataVersion = data._version || 0;
 }
 
 function getCurrentData(){
-  return { settings: settings, categories: categories, products: products };
+  return {
+    _version: dataVersion,
+    settings: settings,
+    products: products,
+    categories: categories
+  };
 }
 
-function loadGhConfig(){
-  ghConfig = store.get('ghconfig', null);
+function saveLocal(){
+  dataVersion = Date.now();
+  return store.set('data', getCurrentData());
 }
 
-function setGhStatus(type, msg){
-  var el = document.getElementById('ghStatus');
-  if(!el) return;
-  el.className = 'gh-status show ' + type;
-  el.innerHTML = msg;
+async function fetchRemote(){
+  var url = DATA_FILE + '?v=' + Date.now();
+  var res = await fetch(url, { cache: 'no-store' });
+  if(!res.ok) throw new Error('HTTP ' + res.status);
+  var data = await res.json();
+  if(!data || typeof data !== 'object') throw new Error('Invalid data');
+  if(!data.settings || !Array.isArray(data.products)) throw new Error('Invalid format');
+  return data;
 }
 
-function fetchRemoteData(){
-  // Try relative data.json first (GitHub Pages same-origin)
-  var url = 'data.json?v=' + Date.now();
-  return fetch(url, { cache: 'no-store' })
-    .then(function(r){
-      if(!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(function(data){
-      if(!data || typeof data !== 'object') throw new Error('Invalid format');
-      if(!data.settings || !Array.isArray(data.products)) throw new Error('Invalid format');
-      return data;
-    });
-}
-
-function publishToGitHub(data, commitMsg){
+async function pushToGitHub(data, commitMsg){
   if(!ghConfig || !ghConfig.token || !ghConfig.owner || !ghConfig.repo){
-    return Promise.reject(new Error('GitHub not configured'));
+    throw new Error('GitHub not configured');
   }
   var branch = ghConfig.branch || 'main';
-  var apiBase = 'https://api.github.com/repos/' + ghConfig.owner + '/' + ghConfig.repo + '/contents/data.json';
+  var apiUrl = 'https://api.github.com/repos/' + ghConfig.owner + '/' + ghConfig.repo + '/contents/' + DATA_FILE;
   var headers = {
     'Authorization': 'Bearer ' + ghConfig.token,
     'Accept': 'application/vnd.github+json',
     'Content-Type': 'application/json'
   };
+  // Get current SHA (if exists)
+  var sha = null;
+  try {
+    var getRes = await fetch(apiUrl + '?ref=' + branch, { headers: headers });
+    if(getRes.ok){
+      var fileInfo = await getRes.json();
+      sha = fileInfo.sha;
+    }
+  } catch(e){ /* file may not exist yet */ }
 
-  return fetch(apiBase + '?ref=' + branch, { headers: headers })
-    .then(function(r){
-      if(r.status === 404) return null;
-      if(!r.ok){
-        return r.json().then(function(e){
-          throw new Error((e && e.message) || ('Fetch failed (' + r.status + ')'));
-        });
-      }
-      return r.json();
-    })
-    .then(function(existing){
-      var body = {
-        message: commitMsg || 'Update catalogue data',
-        content: b64EncodeUnicode(JSON.stringify(data, null, 2)),
-        branch: branch
-      };
-      if(existing && existing.sha) body.sha = existing.sha;
-      return fetch(apiBase, { method: 'PUT', headers: headers, body: JSON.stringify(body) });
-    })
-    .then(function(r){
-      if(!r.ok){
-        return r.json().then(function(e){
-          throw new Error((e && e.message) || ('Publish failed (' + r.status + ')'));
-        });
-      }
-      return r.json();
-    });
+  var body = {
+    message: commitMsg || 'Update catalogue',
+    content: b64EncodeUnicode(JSON.stringify(data, null, 2)),
+    branch: branch
+  };
+  if(sha) body.sha = sha;
+
+  var putRes = await fetch(apiUrl, { method: 'PUT', headers: headers, body: JSON.stringify(body) });
+  if(!putRes.ok){
+    var err = await putRes.json().catch(function(){ return {}; });
+    throw new Error(err.message || ('Publish failed (' + putRes.status + ')'));
+  }
+  return await putRes.json();
 }
 
-function autoPublish(commitMsg){
-  if(!ghConfig || !ghConfig.autoPublish) return Promise.resolve(false);
-  return publishToGitHub(getCurrentData(), commitMsg)
-    .then(function(){
-      lastSyncOk = true;
-      return true;
-    })
-    .catch(function(err){
-      lastSyncOk = false;
-      throw err;
-    });
+async function saveAndPush(commitMsg){
+  saveLocal();
+  if(ghConfig && ghConfig.token && ghConfig.autoPublish !== false){
+    try {
+      await pushToGitHub(getCurrentData(), commitMsg);
+      return { ok: true, msg: 'Saved & published' };
+    } catch(err){
+      return { ok: false, msg: 'Saved locally · GitHub push failed: ' + err.message };
+    }
+  }
+  return { ok: true, msg: 'Saved locally' };
 }
 
-function saveLocally(){
-  store.set('settings', settings);
-  store.set('categories', categories);
-  store.set('products', products);
-}
-
-/* ============================================================
+/* =========================================================
    PUBLIC RENDERING
-   ============================================================ */
-
+   ========================================================= */
 function renderBranding(){
   document.getElementById('brandName').textContent = settings.name || 'Hardware Co.';
   document.getElementById('brandTag').textContent = settings.tag || 'Tools & Fittings';
@@ -738,7 +760,9 @@ function renderProducts(){
 }
 function renderPublic(){ renderBranding(); renderStats(); renderChips(); renderProducts(); }
 
-/* ---------- Product detail ---------- */
+/* =========================================================
+   PRODUCT DETAIL
+   ========================================================= */
 function openProduct(id){
   var p = products.find(function(x){ return x.id === id; });
   if(!p) return;
@@ -758,9 +782,11 @@ function openProduct(id){
 }
 function closePd(){ pdModal.classList.remove('show'); lockScroll(); }
 
-/* ---------- WhatsApp helper ---------- */
-function fillTemplate(template, data){
-  return template.replace(/\{(\w+)\}/g, function(match, key){ return data[key] != null ? data[key] : ''; });
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+function fillTemplate(tpl, data){
+  return tpl.replace(/\{(\w+)\}/g, function(m, k){ return data[k] != null ? data[k] : ''; });
 }
 function openWhatsApp(text){
   var phone = (settings.phone || '').replace(/\D/g, '');
@@ -768,24 +794,25 @@ function openWhatsApp(text){
   window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(text), '_blank');
 }
 
-/* ---------- Contact form → WhatsApp ---------- */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 document.getElementById('enquiryForm').addEventListener('submit', function(e){
   e.preventDefault();
   var name = document.getElementById('efName').value.trim();
   var phone = document.getElementById('efPhone').value.trim();
   var msg = document.getElementById('efMsg').value.trim();
   if(!name || !phone){ toast('Please fill name and phone', 'err'); return; }
-  var template = (settings.templates && settings.templates.contact) || DEFAULT_CONTACT_MSG;
-  var text = fillTemplate(template, {
-    business: settings.name || 'Hardware Co.',
-    name: name, phone: phone, message: msg || '(no extra details)'
-  });
+  var tpl = (settings.templates && settings.templates.contact) || DEFAULT_CONTACT_MSG;
+  var text = fillTemplate(tpl, { business: settings.name || 'Hardware Co.', name: name, phone: phone, message: msg || '(no extra details)' });
   openWhatsApp(text);
   this.reset();
   toast('Opening WhatsApp…', 'ok');
 });
 
-/* ---------- Admin open/close ---------- */
+/* =========================================================
+   ADMIN OPEN / LOGIN
+   ========================================================= */
 function openAdmin(){
   var hb = document.getElementById('hamburger'); if(hb) hb.classList.remove('open');
   var nv = document.getElementById('nav'); if(nv) nv.classList.remove('open');
@@ -811,7 +838,6 @@ function closeAdmin(){
   closeProdForm();
   lockScroll();
 }
-
 document.getElementById('loginForm').addEventListener('submit', function(e){
   e.preventDefault();
   var val = document.getElementById('adminPass').value;
@@ -830,6 +856,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
   }
 });
 
+/* =========================================================
+   ADMIN TABS
+   ========================================================= */
 document.querySelectorAll('.atab').forEach(function(btn){
   btn.addEventListener('click', function(){ switchAdminTab(btn.dataset.tab); });
 });
@@ -839,6 +868,9 @@ function switchAdminTab(tab){
   document.querySelectorAll('.tab-pane').forEach(function(pane){ pane.classList.toggle('hidden', pane.dataset.pane !== tab); });
 }
 
+/* =========================================================
+   ADMIN RENDER
+   ========================================================= */
 function renderAdmin(){
   renderAdminProducts();
   renderAdminCats();
@@ -847,7 +879,6 @@ function renderAdmin(){
   renderSettingsForm();
 }
 
-/* ---------- Admin products ---------- */
 function renderAdminProducts(){
   var list = document.getElementById('adminProductList');
   var q = ui.adminQ.trim().toLowerCase();
@@ -870,7 +901,6 @@ function renderAdminProducts(){
   }).join('');
 }
 
-/* ---------- Admin categories ---------- */
 function renderAdminCats(){
   var list = document.getElementById('adminCatList');
   if(!categories.length){
@@ -883,27 +913,13 @@ function renderAdminCats(){
   }).join('');
 }
 
-/* ---------- Admin messages ---------- */
 function renderMessagesForm(){
   document.getElementById('msgProduct').value = (settings.templates && settings.templates.product) || DEFAULT_PRODUCT_MSG;
   document.getElementById('msgContact').value = (settings.templates && settings.templates.contact) || DEFAULT_CONTACT_MSG;
 }
-document.getElementById('messagesForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var prev = settings.templates ? Object.assign({}, settings.templates) : {};
-  settings.templates = {
-    product: document.getElementById('msgProduct').value.trim() || DEFAULT_PRODUCT_MSG,
-    contact: document.getElementById('msgContact').value.trim() || DEFAULT_CONTACT_MSG
-  };
-  saveLocally();
-  autoPublish('Update WhatsApp messages')
-    .then(function(){ toast('Messages saved & published', 'ok'); })
-    .catch(function(){ toast('Messages saved locally (GitHub not synced)', 'err'); });
-});
 
-/* ---------- Admin GitHub ---------- */
 function renderGhForm(){
-  loadGhConfig();
+  ghConfig = store.get('ghconfig', null);
   var c = ghConfig || {};
   document.getElementById('ghOwner').value = c.owner || '';
   document.getElementById('ghRepo').value = c.repo || '';
@@ -913,10 +929,30 @@ function renderGhForm(){
   if(c.owner && c.repo){
     setGhStatus('ok', '✓ Connected: <b>' + esc(c.owner) + '/' + esc(c.repo) + '</b> @ ' + esc(c.branch || 'main') + '<br>Auto-publish: ' + (c.autoPublish !== false ? 'ON' : 'OFF'));
   } else {
-    setGhStatus('info', 'Not connected yet. Fill in the fields above and hit "Save &amp; Test".');
+    setGhStatus('info', 'Not connected yet. Fill the fields above and click <b>Save &amp; Test</b>.');
   }
 }
-document.getElementById('githubForm').addEventListener('submit', function(e){
+
+function renderSettingsForm(){
+  document.getElementById('stName').value = settings.name || '';
+  document.getElementById('stTag').value = settings.tag || '';
+  document.getElementById('stPhone').value = settings.phone || '';
+  document.getElementById('stEmail').value = settings.email || '';
+  document.getElementById('stAddress').value = settings.address || '';
+  document.getElementById('stPass').value = '';
+}
+
+function setGhStatus(type, msg){
+  var el = document.getElementById('ghStatus');
+  if(!el) return;
+  el.className = 'gh-status show ' + type;
+  el.innerHTML = msg;
+}
+
+/* =========================================================
+   GITHUB EVENTS
+   ========================================================= */
+document.getElementById('githubForm').addEventListener('submit', async function(e){
   e.preventDefault();
   var cfg = {
     owner: document.getElementById('ghOwner').value.trim(),
@@ -926,36 +962,39 @@ document.getElementById('githubForm').addEventListener('submit', function(e){
     autoPublish: document.getElementById('ghAutoPublish').checked
   };
   if(!cfg.owner || !cfg.repo || !cfg.token){ setGhStatus('err', 'Please fill all fields.'); return; }
-  ghConfig = cfg;
-  store.set('ghconfig', cfg);
-  setGhStatus('info', 'Testing connection…');
-  // Test: GET repo
-  fetch('https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo, {
-    headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json' }
-  }).then(function(r){
-    if(!r.ok) return r.json().then(function(e){ throw new Error((e && e.message) || ('HTTP ' + r.status)); });
-    return r.json();
-  }).then(function(repo){
-    setGhStatus('ok', '✓ Connected: <b>' + esc(cfg.owner) + '/' + esc(cfg.repo) + '</b> @ ' + esc(cfg.branch) + '<br>Auto-publish: ' + (cfg.autoPublish ? 'ON' : 'OFF'));
+  setGhStatus('progress', 'Testing connection…');
+  try {
+    var res = await fetch('https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo, {
+      headers: { 'Authorization': 'Bearer ' + cfg.token, 'Accept': 'application/vnd.github+json' }
+    });
+    if(!res.ok){
+      var err = await res.json().catch(function(){ return {}; });
+      throw new Error(err.message || ('HTTP ' + res.status));
+    }
+    ghConfig = cfg;
+    store.set('ghconfig', cfg);
+    setGhStatus('ok', '✓ Connected: <b>' + esc(cfg.owner) + '/' + esc(cfg.repo) + '</b> @ ' + esc(cfg.branch) + '<br>Auto-publish: ' + (cfg.autoPublish ? 'ON' : 'OFF') + '<br><br><b>Tip:</b> Click <b>Publish Now</b> to push your current local data to GitHub.');
     toast('GitHub connected', 'ok');
-  }).catch(function(err){
+  } catch(err){
     setGhStatus('err', '✗ Connection failed: ' + esc(err.message));
     toast('Connection failed', 'err');
-  });
+  }
 });
-document.getElementById('ghPublishNow').addEventListener('click', function(){
-  if(!ghConfig || !ghConfig.token){ setGhStatus('err', 'Configure GitHub first.'); return; }
-  setGhStatus('info', 'Publishing to GitHub…');
-  publishToGitHub(getCurrentData(), 'Publish catalogue from admin')
-    .then(function(){
-      setGhStatus('ok', '✓ Published to GitHub. All devices will see this data on next load.');
-      toast('Published to GitHub', 'ok');
-    })
-    .catch(function(err){
-      setGhStatus('err', '✗ Publish failed: ' + esc(err.message));
-      toast('Publish failed', 'err');
-    });
+
+document.getElementById('ghPublishNow').addEventListener('click', async function(){
+  ghConfig = store.get('ghconfig', null);
+  if(!ghConfig || !ghConfig.token){ setGhStatus('err', 'Configure GitHub first (save token above).'); return; }
+  setGhStatus('progress', 'Publishing to GitHub…');
+  try {
+    await pushToGitHub(getCurrentData(), 'Publish catalogue from admin');
+    setGhStatus('ok', '✓ Published to GitHub. All devices will see this data on next page load (wait ~1 minute for GitHub Pages to rebuild).');
+    toast('Published to GitHub', 'ok');
+  } catch(err){
+    setGhStatus('err', '✗ Publish failed: ' + esc(err.message));
+    toast('Publish failed', 'err');
+  }
 });
+
 document.getElementById('ghDisconnect').addEventListener('click', function(){
   if(!confirm('Disconnect GitHub? Local saves will no longer sync to other devices.')) return;
   ghConfig = null;
@@ -964,18 +1003,24 @@ document.getElementById('ghDisconnect').addEventListener('click', function(){
   toast('Disconnected', 'ok');
 });
 
-/* ---------- Admin settings ---------- */
-function renderSettingsForm(){
-  document.getElementById('stName').value = settings.name || '';
-  document.getElementById('stTag').value = settings.tag || '';
-  document.getElementById('stPhone').value = settings.phone || '';
-  document.getElementById('stEmail').value = settings.email || '';
-  document.getElementById('stAddress').value = settings.address || '';
-  document.getElementById('stPass').value = '';
-}
-document.getElementById('settingsForm').addEventListener('submit', function(e){
+/* =========================================================
+   MESSAGES FORM
+   ========================================================= */
+document.getElementById('messagesForm').addEventListener('submit', async function(e){
   e.preventDefault();
-  var prev = Object.assign({}, settings);
+  settings.templates = {
+    product: document.getElementById('msgProduct').value.trim() || DEFAULT_PRODUCT_MSG,
+    contact: document.getElementById('msgContact').value.trim() || DEFAULT_CONTACT_MSG
+  };
+  var r = await saveAndPush('Update WhatsApp messages');
+  toast(r.msg, r.ok ? 'ok' : 'err');
+});
+
+/* =========================================================
+   SETTINGS FORM
+   ========================================================= */
+document.getElementById('settingsForm').addEventListener('submit', async function(e){
+  e.preventDefault();
   settings.name    = document.getElementById('stName').value.trim();
   settings.tag     = document.getElementById('stTag').value.trim();
   settings.phone   = document.getElementById('stPhone').value.replace(/\D/g, '');
@@ -983,15 +1028,15 @@ document.getElementById('settingsForm').addEventListener('submit', function(e){
   settings.address = document.getElementById('stAddress').value.trim();
   var newPass = document.getElementById('stPass').value.trim();
   if(newPass) settings.password = newPass;
-  saveLocally();
   document.getElementById('stPass').value = '';
   renderBranding();
-  autoPublish('Update site settings')
-    .then(function(){ toast('Settings saved & published', 'ok'); })
-    .catch(function(){ toast('Settings saved locally (GitHub not synced)', 'err'); });
+  var r = await saveAndPush('Update site settings');
+  toast(r.msg, r.ok ? 'ok' : 'err');
 });
 
-/* ---------- Product form ---------- */
+/* =========================================================
+   PRODUCT FORM
+   ========================================================= */
 var currentImage = '';
 function fillCategorySelect(selected){
   var sel = document.getElementById('pfCat');
@@ -1026,7 +1071,7 @@ document.getElementById('pfImgFile').addEventListener('change', function(e){
   var file = e.target.files && e.target.files[0];
   if(!file) return;
   if(!file.type.startsWith('image/')){ toast('Please select an image file', 'err'); return; }
-  compressImage(file, 700, function(dataUrl){
+  compressImage(file, 600, function(dataUrl){
     currentImage = dataUrl;
     document.getElementById('pfImgUrl').value = '';
     updatePreview();
@@ -1043,7 +1088,7 @@ function compressImage(file, maxW, cb){
       canvas.width = Math.round(img.width * scale);
       canvas.height = Math.round(img.height * scale);
       canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-      try { cb(canvas.toDataURL('image/jpeg', 0.72)); } catch(err){ cb(ev.target.result); }
+      try { cb(canvas.toDataURL('image/jpeg', 0.7)); } catch(err){ cb(ev.target.result); }
     };
     img.onerror = function(){ cb(ev.target.result); };
     img.src = ev.target.result;
@@ -1051,14 +1096,15 @@ function compressImage(file, maxW, cb){
   reader.readAsDataURL(file);
 }
 
-document.getElementById('prodForm').addEventListener('submit', function(e){
+document.getElementById('prodForm').addEventListener('submit', async function(e){
   e.preventDefault();
-  var id  = document.getElementById('pfId').value;
+  var id = document.getElementById('pfId').value;
   var name = document.getElementById('pfName').value.trim();
-  var cat  = document.getElementById('pfCat').value;
+  var cat = document.getElementById('pfCat').value;
   if(!categories.length){ toast('Create a category first', 'err'); return; }
   if(!name){ toast('Product name is required', 'err'); return; }
   if(!cat){ toast('Please select a category', 'err'); return; }
+
   var data = {
     name: name, category: cat,
     price: Number(document.getElementById('pfPrice').value) || 0,
@@ -1068,26 +1114,29 @@ document.getElementById('prodForm').addEventListener('submit', function(e){
     image: currentImage,
     published: document.getElementById('pfPublished').checked
   };
-  var prev = products.slice();
+
   if(id){
     var idx = products.findIndex(function(p){ return p.id === id; });
     if(idx === -1){ toast('Product not found', 'err'); return; }
     products[idx] = Object.assign({}, products[idx], data);
   } else {
-    data.id = uid(); products.unshift(data); justAddedId = data.id;
+    data.id = uid();
+    products.unshift(data);
+    justAddedId = data.id;
   }
-  saveLocally();
+
   closeProdForm();
   ui.cat = 'all'; ui.q = '';
-  var si = document.getElementById('searchInput'); if(si) si.value = '';
+  document.getElementById('searchInput').value = '';
   ui.adminQ = '';
-  var as = document.getElementById('adminSearch'); if(as) as.value = '';
+  document.getElementById('adminSearch').value = '';
   switchAdminTab('products');
   if(adminBody) adminBody.scrollTop = 0;
   renderAdminProducts(); renderPublic();
-  autoPublish((id ? 'Update product: ' : 'Add product: ') + name)
-    .then(function(){ toast((id ? 'Updated' : 'Added') + ' & published to GitHub', 'ok'); })
-    .catch(function(){ toast((id ? 'Updated' : 'Added') + ' locally (GitHub not synced)', 'err'); });
+
+  var r = await saveAndPush((id ? 'Update product: ' : 'Add product: ') + name);
+  toast(r.msg, r.ok ? 'ok' : 'err');
+
   if(justAddedId){
     setTimeout(function(){
       document.querySelectorAll('.just-added').forEach(function(el){ el.classList.remove('just-added'); });
@@ -1096,17 +1145,19 @@ document.getElementById('prodForm').addEventListener('submit', function(e){
   }
 });
 
-document.getElementById('adminProductList').addEventListener('click', function(e){
+/* =========================================================
+   ADMIN PRODUCT EVENTS
+   ========================================================= */
+document.getElementById('adminProductList').addEventListener('click', async function(e){
   var t = e.target.closest('button');
   if(!t) return;
   if(t.dataset.toggle){
     var p = products.find(function(x){ return x.id === t.dataset.toggle; });
     if(p){
       p.published = !p.published;
-      saveLocally(); renderAdminProducts(); renderPublic();
-      autoPublish((p.published ? 'Publish' : 'Unpublish') + ' product: ' + p.name)
-        .then(function(){ toast(p.published ? 'Published' : 'Moved to draft', 'ok'); })
-        .catch(function(){ toast('Toggled locally (GitHub not synced)', 'err'); });
+      renderAdminProducts(); renderPublic();
+      var r1 = await saveAndPush((p.published ? 'Publish' : 'Unpublish') + ' product: ' + p.name);
+      toast(r1.msg, r1.ok ? 'ok' : 'err');
     }
   }
   if(t.dataset.edit) openProdForm(t.dataset.edit);
@@ -1114,15 +1165,203 @@ document.getElementById('adminProductList').addEventListener('click', function(e
     if(confirm('Delete this product permanently?')){
       var dp = products.find(function(x){ return x.id === t.dataset.delProd; });
       products = products.filter(function(x){ return x.id !== t.dataset.delProd; });
-      saveLocally(); renderAdminProducts(); renderPublic();
-      autoPublish('Delete product: ' + (dp ? dp.name : ''))
-        .then(function(){ toast('Product deleted & synced', 'ok'); })
-        .catch(function(){ toast('Deleted locally (GitHub not synced)', 'err'); });
+      renderAdminProducts(); renderPublic();
+      var r2 = await saveAndPush('Delete product: ' + (dp ? dp.name : ''));
+      toast(r2.msg, r2.ok ? 'ok' : 'err');
     }
   }
 });
 document.getElementById('adminSearch').addEventListener('input', function(){ ui.adminQ = this.value; renderAdminProducts(); });
 document.getElementById('addProductBtn').addEventListener('click', function(){ openProdForm(null); });
 
-/* ---------- Categories events ---------- */
-document.getElementById('catForm').addEventListener('
+/* =========================================================
+   CATEGORY EVENTS
+   ========================================================= */
+document.getElementById('catForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var input = document.getElementById('catInput');
+  var name = input.value.trim();
+  if(!name) return;
+  if(categories.some(function(c){ return c.name.toLowerCase() === name.toLowerCase(); })){
+    toast('Category already exists', 'err'); return;
+  }
+  categories.push({ id: uid(), name: name });
+  input.value = '';
+  renderAdminCats(); renderChips(); renderStats();
+  var r = await saveAndPush('Add category: ' + name);
+  toast(r.msg, r.ok ? 'ok' : 'err');
+});
+document.getElementById('adminCatList').addEventListener('click', async function(e){
+  var t = e.target.closest('button');
+  if(!t || !t.dataset.delCat) return;
+  var cat = categories.find(function(c){ return c.id === t.dataset.delCat; });
+  if(!cat) return;
+  var used = products.filter(function(p){ return p.category === cat.name; }).length;
+  if(used && !confirm('"' + cat.name + '" has ' + used + ' product(s). They will keep the category label. Delete anyway?')) return;
+  categories = categories.filter(function(c){ return c.id !== t.dataset.delCat; });
+  renderAdminCats(); renderChips(); renderStats();
+  var r = await saveAndPush('Delete category: ' + cat.name);
+  toast(r.msg, r.ok ? 'ok' : 'err');
+});
+
+/* =========================================================
+   BACKUP / RESTORE
+   ========================================================= */
+document.getElementById('exportBtn').addEventListener('click', function(){
+  var blob = new Blob([JSON.stringify(getCurrentData(), null, 2)], { type: 'application/json' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('data.json downloaded', 'ok');
+});
+document.getElementById('importInput').addEventListener('change', function(e){
+  var file = e.target.files && e.target.files[0];
+  if(!file) return;
+  var reader = new FileReader();
+  reader.onload = async function(ev){
+    try {
+      var data = JSON.parse(ev.target.result);
+      if(!data.settings || !Array.isArray(data.products)) throw new Error('Invalid');
+      if(!confirm('Replace all current data with this backup?')) return;
+      applyData(data);
+      renderPublic(); renderAdmin();
+      var r = await saveAndPush('Restore from backup');
+      toast(r.msg, r.ok ? 'ok' : 'err');
+    } catch(err){ toast('Invalid JSON file', 'err'); }
+  };
+  reader.readAsText(file);
+  this.value = '';
+});
+document.getElementById('resetBtn').addEventListener('click', async function(){
+  if(!confirm('Reset everything to demo data? All your products will be lost.')) return;
+  applyData(defaultData());
+  renderPublic(); renderAdmin();
+  var r = await saveAndPush('Reset to demo data');
+  toast(r.msg, r.ok ? 'ok' : 'err');
+});
+
+/* =========================================================
+   GLOBAL CLICK HANDLERS
+   ========================================================= */
+document.addEventListener('click', function(e){
+  var el;
+  el = e.target.closest('[data-open]');
+  if(el){ openProduct(el.dataset.open); return; }
+  el = e.target.closest('[data-wa]');
+  if(el){
+    var p = products.find(function(x){ return x.id === el.dataset.wa; });
+    if(p){
+      var tpl = (settings.templates && settings.templates.product) || DEFAULT_PRODUCT_MSG;
+      openWhatsApp(fillTemplate(tpl, {
+        business: settings.name || 'Hardware Co.',
+        product: p.name,
+        price: money(p.price) || 'On request',
+        unit: p.unit || ''
+      }));
+    }
+    return;
+  }
+  el = e.target.closest('[data-cat]');
+  if(el){ ui.cat = el.dataset.cat; renderChips(); renderProducts(); return; }
+  if(e.target.closest('[data-close-pd]')) { closePd(); return; }
+  if(e.target.closest('[data-close-prod]')) { closeProdForm(); return; }
+});
+
+/* =========================================================
+   MISC WIRING
+   ========================================================= */
+document.getElementById('adminOpenBtn2').addEventListener('click', openAdmin);
+document.getElementById('adminCloseBtn').addEventListener('click', closeAdmin);
+document.getElementById('searchInput').addEventListener('input', function(){ ui.q = this.value; renderProducts(); });
+
+var hamburger = document.getElementById('hamburger');
+var nav = document.getElementById('nav');
+hamburger.addEventListener('click', function(){ hamburger.classList.toggle('open'); nav.classList.toggle('open'); });
+nav.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ hamburger.classList.remove('open'); nav.classList.remove('open'); });
+});
+
+var hdr = document.getElementById('hdr');
+var sections = ['home', 'catalogue', 'contact'];
+window.addEventListener('scroll', function(){
+  hdr.classList.toggle('scrolled', window.scrollY > 24);
+  var pos = window.scrollY + 140;
+  var current = 'home';
+  sections.forEach(function(id){ var s = document.getElementById(id); if(s && s.offsetTop <= pos) current = id; });
+  nav.querySelectorAll('a[href^="#"]').forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+}, { passive: true });
+
+document.addEventListener('keydown', function(e){
+  if(e.key !== 'Escape') return;
+  if(prodModal.classList.contains('show')) { closeProdForm(); return; }
+  if(pdModal.classList.contains('show')) { closePd(); return; }
+  if(adminEl.classList.contains('show')) { closeAdmin(); return; }
+});
+[pdModal, prodModal].forEach(function(m){
+  m.addEventListener('click', function(e){ if(e.target === m){ if(m === pdModal) closePd(); else closeProdForm(); } });
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+async function boot(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  try { sessionStorage.removeItem(PREFIX + 'auth'); } catch(e){}
+
+  var local = store.get('data', null);
+
+  // 1. Show local data instantly (so page isn't blank)
+  if(local && local.settings && Array.isArray(local.products)){
+    applyData(local);
+    renderPublic();
+  }
+
+  // 2. Try to fetch latest from GitHub
+  try {
+    var remote = await fetchRemote();
+    var remoteVer = remote._version || 0;
+    var localVer = (local && local._version) || 0;
+
+    if(remoteVer >= localVer){
+      // Remote is newer or equal → use remote
+      applyData(remote);
+      store.set('data', remote);
+      renderPublic();
+    } else {
+      // Local is newer (pending push) → keep local, retry push
+      applyData(local);
+      renderPublic();
+      ghConfig = store.get('ghconfig', null);
+      if(ghConfig && ghConfig.token && ghConfig.autoPublish !== false){
+        try {
+          await pushToGitHub(getCurrentData(), 'Auto-sync pending changes');
+        } catch(e){ /* silent - admin will see in panel */ }
+      }
+    }
+  } catch(fetchErr){
+    // Fetch failed (offline, or data.json doesn't exist yet)
+    if(!local || !local.settings || !Array.isArray(local.products)){
+      // No local data either → use defaults
+      applyData(defaultData());
+      renderPublic();
+      saveLocal();
+    }
+  }
+
+  ghConfig = store.get('ghconfig', null);
+  observeReveals();
+  setTimeout(observeReveals, 120);
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
+
+})();
+</script>
+</body>
+</html>
